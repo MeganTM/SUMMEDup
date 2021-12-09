@@ -1,7 +1,7 @@
 # SUMup
 Scripts to process and view data from the SUMup firn and snow density dataset
 
-## Cloning the repository
+## 1. Cloning the repository
 
 ### Option 1: Google Colab
 
@@ -34,3 +34,14 @@ drive.mount('/content/gdrive')
 git clone https://github.com/MeganTM/SUMup
 ```
 3. Open the notebook `ExamineSUMup.ipynb` in Jupyter.
+
+## 2. Downloading the dataset
+
+The SUMup snow and firn density dataset is too large to be stored on GitHub. However, it's available to download for free from the Arctic Data Center.
+1. Click on the following link to visit the dataset on the Arctic Data Center: https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2W08WH6N
+2. Download the file `sumup_density_2020_v060121.nc`
+3. Save the file to your Google Drive (if using Google Colab) or to the cloned repository if using Jupyter locally.
+
+
+## 3. Using the notebook
+Once you've completed steps 1 and 2, you are all set to begin running the notebook. Instructions and helpful comments can be found in the notebook itself. Should you have any questions, please reach out to Megan Thompson-Munson at metm9666@colorado.edu.
