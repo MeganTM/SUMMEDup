@@ -20,13 +20,13 @@ drive.mount('/content/gdrive')
 
 ### Option 2: Jupyter
 
-### Required libraries:
-* xarray
-* numpy
-* pandas
-* matplotlib
-* cartopy
-* simplekml
+#### Required libraries:
+* [xarray](http://xarray.pydata.org/en/stable/getting-started-guide/installing.html)
+* [numpy](https://numpy.org/install/)
+* [pandas](https://pandas.pydata.org/docs/getting_started/install.html)
+* [matplotlib](https://matplotlib.org/stable/)
+* [cartopy](https://scitools.org.uk/cartopy/docs/latest/installing.html)
+* [simplekml](https://pypi.org/project/simplekml/)
 
 1. Install the required libraries (if not already installed)
 2. In a terminal window, clone the repository:
