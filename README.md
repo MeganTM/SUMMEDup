@@ -3,7 +3,7 @@ Scripts to process and view data from the SUMup firn and snow density dataset
 
 ## 1. Cloning the repository
 
-### Option 1: Google Colab
+### Option 1: Google Colab (recommended)
 
 1. Open your Google Drive open a Google Colab noteboook by clicking New > More > Google Colaboratory.
 3. Once the notebook opens, type the following lines to clone this repository in your Google Drive:
@@ -45,3 +45,5 @@ The SUMup snow and firn density dataset is too large to be stored on GitHub. How
 
 ## 3. Using the notebook
 Once you've completed steps 1 and 2, you are all set to begin running the notebook. Instructions and helpful comments can be found in the notebook itself. Should you have any questions, please reach out to Megan Thompson-Munson at metm9666@colorado.edu.
+
+IMPORTANT NOTE FOR JUPYTER USERS: This script was originally designed for Google Colab, and may require some adjustments for use in Jupyter. For example, the first cell in which you set up Google Drive does not need to be run if you're in Jupyter. Future updates to this tool will create a more seamless transition between Google Colab and Jupyter.
