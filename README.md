@@ -35,7 +35,12 @@ git clone https://github.com/MeganTM/SUMup
 ```
 3. Open the notebook `ExamineSUMup.ipynb` in Jupyter.
 
-## 2. Downloading the dataset
+
+### Option 3: Manually download
+If you have trouble with either of the above options, simply download the file in this GitHub repository and save them to a local folder on your computer (if you plan to use Jupyter) or a folder on Google Drive (if you plan to use Google Colab). The disadvantage is that you will not be able to update the repository using git commands.
+
+
+## 2. Downloading the SUMup dataset
 
 The SUMup snow and firn density dataset is too large to be stored on GitHub. However, it's available to download for free from the Arctic Data Center.
 1. Click on the following link to visit the dataset on the Arctic Data Center: https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2W08WH6N
