@@ -17,7 +17,7 @@ drive.mount('/content/gdrive')
 ! git clone https://github.com/MeganTM/SUMMEDup
 ```
 3. Navigate back to your Google Drive and there should be a folder called `SUMMEDup`.
-4. Within the new folder, double click on the notebook `ExamineSUMup.ipynb` and it should open up within Google Colab.
+4. Within the new folder, double click on the notebook `SUMMEDupTutorial.ipynb` and it should open up within Google Colab.
 
 
 ### Option 2: Jupyter
@@ -33,9 +33,9 @@ drive.mount('/content/gdrive')
 1. Install the required libraries (if not already installed)
 2. In a terminal window, clone the repository:
 ```
-git clone https://github.com/MeganTM/SUMup
+git clone https://github.com/MeganTM/SUMMEDup
 ```
-3. Open the notebook `ExamineSUMup.ipynb` in Jupyter.
+3. Open the notebook `SUMMEDupTutorial.ipynb` in Jupyter.
 
 
 ### Option 3: Manually download
