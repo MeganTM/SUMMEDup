@@ -45,8 +45,9 @@ drive.mount('/content/gdrive')
 git clone https://github.com/MeganTM/SUMMEDup
 ```
 A new folder should appear called `SUMMEDup`.
-4. Save the SUMup dataset file `sumup_density_2020_v060121.nc` to the `SUMMEDup` folder.
-5. Within the `SUMMEDup` folder, open the notebook `SUMMEDupTutorial.ipynb` in Jupyter.
+
+3. Save the SUMup dataset file `sumup_density_2020_v060121.nc` to the `SUMMEDup` folder.
+4. Within the `SUMMEDup` folder, open the notebook `SUMMEDupTutorial.ipynb` in Jupyter.
 
 
 ### Option 3: Manually download
