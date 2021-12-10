@@ -1,7 +1,7 @@
-# SUMup Dataset Tool
+# SUMMEDup: The SUMup Dataset Explorer
 _Scripts to process and view data from the SUMup firn and snow density dataset_
 
-The developed library `sumup.py` can be imported into any script and used on its own, but to best explore its functionality, follow the instructions below to clone this repository and walkthrough a tutorial developed in a Jupyter notebook.
+The developed library `SUMMEDup.py` can be imported into any script and used on its own, but to best explore its functionality, follow the instructions below to clone this repository and walkthrough a tutorial developed in a Jupyter notebook.
 
 ## 1. Cloning the repository
 
@@ -14,9 +14,9 @@ The developed library `sumup.py` can be imported into any script and used on its
 from google.colab import drive
 drive.mount('/content/gdrive')
 %cd gdrive/My Drive
-! git clone https://github.com/MeganTM/SUMup
+! git clone https://github.com/MeganTM/SUMMEDup
 ```
-3. Navigate back to your Google Drive and there should be a folder called `SUMup`.
+3. Navigate back to your Google Drive and there should be a folder called `SUMMEDup`.
 4. Within the new folder, double click on the notebook `ExamineSUMup.ipynb` and it should open up within Google Colab.
 
 
