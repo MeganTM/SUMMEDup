@@ -7,7 +7,7 @@ The developed library `SUMMEDup.py` can be imported into any script and used on 
 
 ### Option 1: Google Colab (recommended)
 
-1. Open your Google Drive open a Google Colab noteboook by clicking New > More > Google Colaboratory.
+1. Open Google drive and create a new Google Colab noteboook by clicking New > More > Google Colaboratory.
 3. Once the notebook opens, type the following lines to clone this repository in your Google Drive:
 
 ```
