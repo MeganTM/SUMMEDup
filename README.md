@@ -45,7 +45,7 @@ If you have trouble with either of the above options, simply download the files 
 The SUMup snow and firn density dataset is too large to be stored on GitHub. However, it's available to download for free from the Arctic Data Center.
 1. Click on the following link to visit the dataset on the Arctic Data Center: https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2W08WH6N
 2. Download the file `sumup_density_2020_v060121.nc`
-3. Save the file to your Google Drive (if using Google Colab) or to the cloned repository if using Jupyter locally.
+3. Save the file to your Google Drive (if using Google Colab) or to the cloned repository (if using Jupyter locally).
 
 
 ## 3. Using the notebook
