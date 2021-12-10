@@ -1,5 +1,5 @@
 # SUMMEDup: The SUMup Dataset Explorer
-_Scripts to process and view data from the SUMup firn and snow density dataset_
+_Scripts to process and view data from the SUMup snow and firn density dataset_
 
 The developed library `SUMMEDup.py` can be imported into any script and used on its own, but to best explore its functionality, follow the instructions below to clone this repository and walkthrough a tutorial developed in a Jupyter notebook.
 
