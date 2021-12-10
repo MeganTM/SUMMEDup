@@ -1,0 +1,10 @@
+name: sumup-env
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - matplotlib
+  - xarray
+  - simplekml
+  - pandas
+  - cartopy
