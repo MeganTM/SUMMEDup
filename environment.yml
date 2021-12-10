@@ -8,3 +8,5 @@ dependencies:
   - simplekml
   - pandas
   - cartopy
+  - netcdf4
+  - h5netcdf
