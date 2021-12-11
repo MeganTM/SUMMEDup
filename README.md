@@ -6,7 +6,10 @@ The developed library `SUMMEDup.py` can be imported into any script and used on 
 
 ### Option 1: Binder
 1. Go to https://mybinder.org/
-2. Copy and paste the following repository URL into the "GitHub repository name or URL" field: `https://github.com/MeganTM/SUMMEDup`
+2. Copy and paste the following repository URL into the "GitHub repository name or URL" field: 
+```
+https://github.com/MeganTM/SUMMEDup
+```
 3. Click "launch"
 4. Once loaded, open the notebook `SUMMEDupTutorial.ipynb`.
 
