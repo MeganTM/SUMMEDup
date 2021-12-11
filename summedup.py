@@ -312,49 +312,63 @@ def PlotLocs(df,color_by='r',color_map='none',save='no',**kwargs):
         plt.savefig('figures/SUMup_locations.png',dpi=500,bbox_inches='tight')
     
     
-# Save locations as csv or kml
+# Save locations as csv or kmz
 def SavePoints(df,ftype,by_icesheet):
+
+    img = pd.read_table('imgurURLs.txt',header=None)
+    img = np.array(img)
+
+    df = df.sort_values(by=['CoreID']).reset_index(drop=True)
 
     if by_icesheet == 'yes':
         df_AIS = df[df.Latitude<0]
         df_AIS = df_AIS.reset_index(drop=True)
         df_GrIS = df[df.Latitude>0]
         df_GrIS = df_GrIS.reset_index(drop=True)
+        img_AIS = img[:887]
+        img_GrIS = img[887:]
 
         if ftype == 'csv':
             df_AIS.to_csv('output/SUMupLocs_AIS.csv')
             df_GrIS.to_csv('output/SUMupLocs_GrIS.csv')
 
-        if ftype == 'kml':
+        if ftype == 'kmz':
             kml_AIS = simplekml.Kml()
-            for i in range(len(df_AIS)):
+            kml_AIS.parsetext(parse=False)
+            for i in range(len(df_AIS)-1):
                 pnt_AIS = kml_AIS.newpoint()
-                pnt_AIS.name = df_AIS['CoreID'][i]
+                pnt_AIS.name = 'Core {}'.format(df_AIS['CoreID'][i])
                 pnt_AIS.coords = [(df_AIS['Longitude'][i],df_AIS['Latitude'][i])]
+                pnt_AIS.description = '<img src='+str(img_AIS[i])[1:-1]+' width="250"/>'
                 pnt_AIS.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png'
-            kml_AIS.save(path='output/SUMupLocs_AIS.kml')
+            kml_AIS.savekmz('output/SUMupLocs_AIS.kmz',format=False)
             
+
             kml_GrIS = simplekml.Kml()
-            for i in range(len(df_GrIS)):
+            kml_GrIS.parsetext(parse=False)
+            for i in range(len(df_GrIS)-1):
                 pnt_GrIS = kml_GrIS.newpoint()
-                pnt_GrIS.name = df_GrIS['CoreID'][i]
+                pnt_GrIS.name = 'Core {}'.format(df_GrIS['CoreID'][i])
                 pnt_GrIS.coords = [(df_GrIS['Longitude'][i],df_GrIS['Latitude'][i])]
+                pnt_GrIS.description = '<img src='+str(img_GrIS[i])[1:-1]+' width="250"/>'
                 pnt_GrIS.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png'
-            kml_GrIS.save(path='output/SUMupLocs_GrIS.kml')
+            kml_GrIS.savekmz('output/SUMupLocs_GrIS.kmz',format=False)
 
     if by_icesheet == 'no':
         
         if ftype == 'csv':
             df.to_csv('output/SUMupLocs.csv')
 
-        if ftype == 'kml':
+        if ftype == 'kmz':
             kml = simplekml.Kml()
+            kml.parsetext(parse=False)
             for i in range(len(df)):
                 pnt = kml.newpoint()
-                pnt.name = df['CoreID'][i]
+                pnt.name = 'Core {}'.format(df['CoreID'][i])
                 pnt.coords = [(df['Longitude'][i],df['Latitude'][i])]
+                pnt.description = '<img src='+str(img[i])[1:-1]+' width="250"/>'
                 pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png'
-            kml.save(path='output/SUMupLocs.kml')        
+            kml.savekmz(path='output/SUMupLocs.kmz')       
 
 
 # Plot density profiles
@@ -440,7 +454,7 @@ def PlotDensity(df,CoreID,color=['m','c','k','y','r','b'],save='no',compare='no'
                 legend.get_frame().set_boxstyle('Square')
 
                 if core['Latitude'][0] < 0:
-                    ax_map = inset_axes(ax, width=0.85, height=0.85, bbox_to_anchor=(1,1.02),bbox_transform=ax.transAxes, 
+                    ax_map = inset_axes(ax, width=0.8, height=0.8, bbox_to_anchor=(1,1.02),bbox_transform=ax.transAxes, 
                                         loc='lower right', borderpad=0,
                                         axes_class=cartopy.mpl.geoaxes.GeoAxes, 
                                         axes_kwargs=dict(map_projection=ccrs.SouthPolarStereo()))
@@ -468,7 +482,7 @@ def PlotDensity(df,CoreID,color=['m','c','k','y','r','b'],save='no',compare='no'
         ax.set_xlabel(r'Density (kg m$^{-3}$)')
 
         if np.array(df['Latitude'][df['CoreID']==CoreID[0]])[0] < 0:
-            ax_map = inset_axes(ax, width=0.85, height=0.85, bbox_to_anchor=(1,1.02),bbox_transform=ax.transAxes, 
+            ax_map = inset_axes(ax, width=0.8, height=0.8, bbox_to_anchor=(1,1.02),bbox_transform=ax.transAxes, 
                                 loc='lower right', borderpad=0,
                                 axes_class=cartopy.mpl.geoaxes.GeoAxes, 
                                 axes_kwargs=dict(map_projection=ccrs.SouthPolarStereo()))
@@ -516,7 +530,7 @@ def PlotDensity(df,CoreID,color=['m','c','k','y','r','b'],save='no',compare='no'
 
     if save == 'yes':
         core_str = str(CoreID)[1:-1]
-        core_strs = core_str.replace(',','_')
-        plt.savefig('figures/density_profiles_{}.png'.format(core_strs),dpi=500,bbox_inches='tight')
+        core_strs = core_str.replace(', ','_')
+        plt.savefig('figures/DensityProfile{}.png'.format(core_strs),dpi=300,bbox_inches='tight')
 
 
