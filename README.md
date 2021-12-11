@@ -50,5 +50,3 @@ A new folder should appear called `SUMMEDup`.
 
 
 Once you've completed one of the above options, you are all set to begin running the tutorial. Instructions and helpful comments can be found in the notebook itself. If you have any questions or ideas for new functions, please reach out to Megan Thompson-Munson at metm9666@colorado.edu.
-
-IMPORTANT NOTE FOR JUPYTER USERS: This script was originally designed for Google Colab, and may require some adjustments for use in Jupyter. For example, the first cell in which you set up Google Drive does not need to be run if you're in Jupyter. Future updates to this tool will create a more seamless transition between Google Colab and Jupyter.
