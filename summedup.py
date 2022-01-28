@@ -141,7 +141,7 @@ def Reformat(df,save='no'):
             dfi['Density'] = dfi.Density*1000
 
             dfi = dfi.rename(columns={'Elevation':'Elevation (m)','Midpoint':'Midpoint (m)','StartDepth':'Start Depth (m)',
-                                      'StopDepth':'Stop Depth (m)','Thickness':'Thickness (m)','Density':'Density (kg/m^-3)'})
+                                      'StopDepth':'Stop Depth (m)','Thickness':'Thickness (m)','Density':'Density (kg m^-3)'})
             
             dfis.append(dfi)
 
@@ -389,7 +389,7 @@ def PlotDensity(df,CoreID,color=['m','c','k','y','r','b'],save='no',compare='no'
             depth = np.array(core['Midpoint (m)'])
             startdepth = np.array(core['Start Depth (m)'])
             stopdepth = np.array(core['Stop Depth (m)'])
-            density = np.array(core['Density (kg/m^-3)'])
+            density = np.array(core['Density (kg m^-3)'])
             label = 'Core: {}\nCitation: {:.0f}\nLat: {:.2f}\nLon: {:.2f}\nElev: {:.0f} m\nDate: {}'.format(
                 core['CoreID'][0],core['Citation'][0],core['Latitude'][0],core['Longitude'][0],
                 core['Elevation (m)'][0],str(core['Timestamp'][0])[:10])
@@ -506,7 +506,7 @@ def PlotDensity(df,CoreID,color=['m','c','k','y','r','b'],save='no',compare='no'
             depth = np.array(core['Midpoint (m)'])
             startdepth = np.array(core['Start Depth (m)'])
             stopdepth = np.array(core['Stop Depth (m)'])
-            density = np.array(core['Density (kg/m^-3)'])
+            density = np.array(core['Density (kg m^-3)'])
 
             if startdepth[-1] == -9999:
                 ax.plot(density,depth,
