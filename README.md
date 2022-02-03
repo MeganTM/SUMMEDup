@@ -7,6 +7,7 @@ The developed library `SUMMEDup.py` can be imported into any script and used on 
 ### Option 1: Binder
 
 Click this button, or follow the directions below to use this tool on Binder.
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MeganTM/SUMMEDup/HEAD)
 
 1. Go to https://mybinder.org/
